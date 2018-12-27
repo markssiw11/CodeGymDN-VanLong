@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Hello</title>
 </head>
+
 <body>
     <script>
-          var width;
-          var height;
-          width = parseInt(prompt("Enter the width"));
-          height = parseInt(prompt("Enter the height"));
-          area = width*height;
-          document.write("the area is: " + area);
-    </script>        
+        var diemLoa;
+        var diemLy;
+        var diemToan;
+        diemHoa = parseInt(prompt("Enter DiemHoa"));
+        diemLy = parseInt(prompt("Enter DiemLy"));
+        diemToan = parseInt(prompt("Enter DiemToan"));
+
+        var diemTrungBinh = (diemToan + diemLy + diemHoa) / 3;
+        var tongDiem = (diemToan + diemLy + diemHoa);
+        document.write("Diem Trung Binh la: " + diemTrungBinh);
+        document.write(" Tong Diem La: " + diemToan);     
+
+    </script>
 </body>
+
 </html>
