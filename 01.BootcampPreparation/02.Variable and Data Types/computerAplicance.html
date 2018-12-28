@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <Meta Charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<table>
+    <tr>
+        <td cosplan="5"><input id="firstParam" type="number"></td>
+        <td cosplan="5"><input id="secondParam" type="number"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="addition()">Addition(+)</button>
+        </td>
+        <td>
+            <button onclick="subtraction()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button onclick="multication()">Mutication(x)</button>
+        </td>
+        <td>
+            <button onclick="division()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+Result is <span id="result"></span>
+
+<script>
+    function addition() {
+        var firstParam = parseInt(document.getElementById("firstParam").value);
+        var secondParam = parseInt(document.getElementById("secondParam").value);
+        var sum = firstParam + secondParam;
+        document.getElementById("result").innerHTML = sum;
+    }
+    function subtraction() {
+        var firstParam = parseInt(document.getElementById("firstParam").value);
+        var secondParam = parseInt(document.getElementById("secondParam").value);
+        var sub = firstParam - secondParam;
+        document.getElementById("result").innerHTML = sub;
+    }
+    function multication() {
+        var firstParam = parseInt(document.getElementById("firstParam").value);
+        var secondParam = parseInt(document.getElementById("secondParam").value);
+        var mul = firstParam*secondParam;
+        document.getElementById("result").innerHTML = mul;
+    }
+    function division() {
+        var firstParam = parseInt(document.getElementById("firstParam").value);
+        var secondParam = parseInt(document.getElementById("secondParam").value);
+        var div = firstParam/secondParam;
+        document.getElementById("result").innerHTML = div;
+    }
+</script>
+
+</html>
