@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>structure class date</title>
+</head>
+<script>
+    function MyDate(day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.Year = Year;
+        }
+        this.setDate = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+    }
+    var date = new MyDate(2, 2, 2007);
+    var day = date.getDay();
+    var year = date.getYear();
+    var month = date.getMonth();
+
+    alert(day + "/" + month + "/" + year);
+
+    date.setDay(20);
+    date.setMonth(10);
+
+    day = date.getDay();
+    month = date.getMonth();
+    alert(day + "/" + month + "/" + year);
+
+    date.setDate(02, 03, 2004);
+    
+    day = date.getDay();
+    month = date.getMonth();
+    year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+</script>
+
+</html>
