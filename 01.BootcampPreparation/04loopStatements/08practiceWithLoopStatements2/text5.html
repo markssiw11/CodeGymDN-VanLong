@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh Lai Xuat Ngan Hang</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("số tiền ban đầu: VND"));
+        var b = parseFloat(prompt("lãi xuất cho vây mỗi tháng: phần trăm"));
+        var c = parseInt(prompt("số tháng"));
+        var d = 0;
+        for (var i = 1; i <= c; i++) {
+            d = (a + d) * b * c;
+        }
+        document.write("lãi xuất phải trả  sau " + c + " tháng" + ":" + d);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title> number bigger than ten</title>
+</head>
+<script>
+    var integer = [12, 11, 10, 546, 32, 1, 3, 56, 1, 98];
+    var max = integer[0];
+    var index = 0;
+    for(var i=0;i<integer.length;i++) {
+        if(integer[i]>max) {
+            max = integer[i];
+            index= i;
+        }
+    }
+    document.write("a number biggest is "+max+ "at position "+ index );
+</script>
+
+</html>

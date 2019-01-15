@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy Đoán xem</title>
+</head>
+
+<body>
+    <button id="inputNumber" onclick="play()">Play</button>
+    <p id="result"></p>
+    <script>
+        function play() {
+            var from = parseInt(prompt("a number Begin From"));
+            var end = parseInt(prompt("a number finish at"));
+            var result = randomInt(from, end);
+            document.write(result);
+            for (var i = 1; i <= 3; i++) {
+                var selecNumber = parseInt(prompt("chose a number from space  you provice"));
+                if (selecNumber === result) {
+                    alert("you right");
+                    break;
+                } else {
+                    if (selecNumber > result) {
+                        alert("a number you choice bigger than a random number");
+                    } else {
+                        alert("a number you choice less than a random number");
+                    }
+                }
+            }
+            alert("you lose");
+        }
+        function randomInt(min, max) {
+            if (min == null && max == null)
+                return 0;
+            if (max == null) {
+                max = min;
+                min = 0
+            }
+            return min + Math.floor(Math.random() * (max - min + 1));
+        }
+
+
+    </script>
+</body>
+
+</html>

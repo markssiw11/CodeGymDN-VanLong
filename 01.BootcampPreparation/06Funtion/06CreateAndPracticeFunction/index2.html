@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>increase argument one unit</title>
+</head>
+
+<body>
+    <input type="number" id="inputNumber" oninput="increaseValue(this.value)" onchange="increaseValue(this.value)"></input>
+    <p id="showResult"> increase one unit: </p>
+</body>
+<script>
+    function increaseValue(numb) {
+        numb=parseInt(numb)+1;
+        document.getElementById("showResult").innerHTML= numb;
+    }
+
+</script>
+
+</html>

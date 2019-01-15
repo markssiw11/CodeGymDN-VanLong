@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title>count negative integer </title>
+</head>
+<script>
+    var integer = [12, -22, 1, -3, 45, 2, 5, 23, 7, 94];
+    var max = integer[0];
+    var sorted;
+    for (i = 0; i < integer.length; i++) {
+        for (var j = i + 1; j < integer.length; j++) {
+            if (integer[i] < integer[j]) {
+                max = integer[j];
+                integer[j] = integer[i];
+                integer[i] = max;
+            }
+        }
+        document.write(integer[i]+" ");
+    }
+</script>
+
+</html>

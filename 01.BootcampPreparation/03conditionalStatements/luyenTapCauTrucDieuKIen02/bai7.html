@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giải Phương Trình Bậc Một</title>
+</head>
+<script>
+    var a = parseInt(prompt('a(a#0)'));
+    var b = parseInt(prompt('b'));
+    var c = parseInt(prompt('c'));
+    var delta=(b*b-4*a*c);
+    if(a!=0) {
+        if (delta<0) {
+            alert('phương trình vô nghiệm');
+        } else if (delta==0) {
+            alert('phương trình có nghiệm kép x1=x2='+ -b/2*a)
+        } else {
+            alert('phương trình có 2 nghiệm phân biệt x1='+(-b-Math.sqrt(delta))/2*a+' x2='+(-b+Math.sqrt(delta))/2*a);
+        }
+    } else {
+        alert('là phương trình bậc 1');
+    }
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script>
+    function isPalindrome(string) {
+        var res = new String(string);
+        var leftPos = 0;
+        var rightPos = res.length - 1;
+        while (rightPos >= leftPos) {
+            if (res[leftPos] !== res[rightPos]) {
+                return false;
+            } else {
+                rightPos = rightPos - 1;
+                leftPos = leftPos + 1;
+            }
+        }
+        return true;
+    }
+    var str = prompt("Enter a string: ");
+    var hasPalindrome = isPalindrome(str);
+    document.write("String '" + str + "' is a Palindrome string, right? Answer: " + hasPalindrome);
+</script>
+
+</html>

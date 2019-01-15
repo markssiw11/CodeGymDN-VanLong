@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>is number</title>
+</head>
+<script>
+    function isNumber(value) {
+        return !isNaN(value) && Number.isInteger(value) && parseInt(value) < 0;
+    }
+    var value = prompt("Enter a value: ");
+    var result = isNumber(value);
+    alert(result);
+
+</script>
+
+</html>

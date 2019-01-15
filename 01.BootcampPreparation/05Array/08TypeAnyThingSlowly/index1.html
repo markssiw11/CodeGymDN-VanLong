@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connect The Element</title>
+
+</head>
+
+<body>
+    <h3>Type Anything Slowly</h3>
+    <input type="text" id="paragraph" onkeydown="typeTextarea()"></input>
+
+</body>
+<style>
+    body {
+        padding-top: 100px
+    }
+
+    body {
+        padding-left: 600px
+    }
+</style>
+<script>
+    var a = new Array("T","Ô","I"," ","Đ","E","P");
+    function typeTextarea();
+    t = document.f.txt.value;
+    j = t.length;
+    if (j > 0) {
+        for (var i = 1; i <= j; i++) {
+            n = n + a[i];
+            if (i == 7) {
+                document.f.txt.value = "";
+                n = "";
+            }
+        }
+    }
+    document.f.txt.value = n;
+    n = "";
+    setTimeout("typeTextarea()", 1);
+                //return false;
+
+</script>
+
+
+</html

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sử Dụng Vòng Lặp While</title>
+</head>
+
+<body>
+
+    <script>
+        var num = parseInt(prompt("Enter a Number: "));
+        var total = 0;
+        while (num != -1) {
+            num = parseInt(prompt('Enter a Number To Print. Enter -1 To Quit.'));
+            document.write(num+"<br/>");
+            total = total + num;
+        }
+        document.write("Tổng Các Số Trên Là: "+total);
+    </script>
+</body>
+
+</html>

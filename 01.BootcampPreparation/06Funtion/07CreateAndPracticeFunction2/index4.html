@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>min number of three integer</title>
+</head>
+<script>
+    var firstNumb =parseInt(prompt("Enter A First Number: "));
+    var secondNumb =parseInt(prompt("Enter A Second Number: "));
+    var thirdNumb =parseInt(prompt("Enter A Second Number: "))
+    function minOfThreeNumber(firstNumb, secondNumb, thirdNumb) {
+         var min = firstNumb;
+        if (min > secondNumb) {
+            min = secondNumb;
+        }
+        if (min > thirdNumb) {
+            min = thirdNumb;
+        }
+        return min;
+    }
+    var compare= minOfThreeNumber(firstNumb,secondNumb,thirdNumb);
+    alert("min is: "+compare);
+
+</script>
+
+</html>

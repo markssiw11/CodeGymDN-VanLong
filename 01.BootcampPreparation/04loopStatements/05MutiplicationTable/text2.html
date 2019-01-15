@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mutiplication Table Use While Loop Statement</title>
+</head>
+
+<body>
+    <script>
+        var sout, i, j, result;
+        sout = "<table border='1' width='600' cellspacing='1' cellpadding='3'>"
+        i = j = result = 1;
+        while (i <= 9) {
+            sout = sout + "<tr>";
+            while (j <= 8) {
+                result = (j + 1) * i;
+                sout = sout + "<td>" + (j + 1) + "x" + i + "=" + result + "</td>";
+
+                j++;
+            }
+            sout = sout + "</tr>";
+            j = 1;
+            i++;
+        } sout = sout + "</table>";
+        document.write(sout);
+    </script>
+</body>
+
+</html>

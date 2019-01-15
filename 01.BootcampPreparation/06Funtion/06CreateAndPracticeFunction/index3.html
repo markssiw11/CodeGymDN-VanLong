@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>compare two parameters</title>
+</head>
+
+<script>
+    var numb1 = prompt("Enter a first number: ");
+    var numb2 = prompt("Enter a second number: ");
+    function increaseValue(firstNumb,secondNumb) {
+        firstNumb = parseInt(firstNumb);
+        secondNumb = parseInt(secondNumb);
+        if (firstNumb < secondNumb) {
+            alert(secondNumb + " biggger than " + firstNumb);
+        } else {
+            var sum = firstNumb + secondNumb;
+        }
+        document.write(sum);
+    }
+    var result=increaseValue(numb1,numb2);
+</script>
+
+</html>

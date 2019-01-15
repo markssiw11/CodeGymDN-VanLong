@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng if/else</title>
+</head>
+
+<body>
+    <input type="number" id="firstMonth" />
+    <button onclick="calculate()">tính số ngày</button>
+    <p id="showResultOne"></p>
+    và<br></br>
+    <input type="number" id="secondMonth" />
+    <button onclick="calculate()">tính số ngày</button>
+    <p id="showResultTwo"></p>
+    </and>
+    <script>
+        function calculate() {
+            var firstMonth = parseInt(document.getElementById("firstMonth").value);
+            switch (firstMonth) {
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("showResultOne").innerHTML = "thang " + firstMonth + " có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("showResultOne").innerHTML = "tháng 2 có 28 hoặc 29 ngày";
+                    break;
+                default:
+                    document.getElementById("showResultOne").innerHTML = "thang " + firstMonth + " có 31 ngày";
+                    break;
+            }
+        }
+        function calculate() {
+            var secondMonth = parseInt(document.getElementById("secondMonth").value);
+            switch (secondMonth) {
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("showResultTwo").innerHTML = "thang " + secondMonth + " có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("showResultTwo").innerHTML = "tháng 2 có 28 hoặc 29 ngày";
+                    break;
+                default:
+                    document.getElementById("showResultTwo").innerHTML = "thang " + secondMonth + " có 31 ngày";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

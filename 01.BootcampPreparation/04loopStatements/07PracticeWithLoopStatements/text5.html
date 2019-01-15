@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị n Số Đầu Tiên Của Dãy Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        var fibonacciN1 = 1;
+        var fibonacciN2 = 1;
+        var sum = 2;
+        for (var i = 2; i < 20; i++) { 
+        var fibonacciN = fibonacciN1 + fibonacciN2;
+        sum = sum + fibonacciN;
+        fibonacciN2 = fibonacciN1;
+        fibonacciN1 = fibonacciN;
+        }
+        alert(sum);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng DỤng Good-Cheap-Fast</title>
+</head>
+
+<label><input id="good" value="good" type="checkbox" onclick="good()" />Good</label><br></br>
+<label><input id="cheap" value="cheap" type="checkbox" onclick="cheap()" />Cheap</label><br></br>
+<label><input id="fast" value="fast" type="checkbox" onclick="fast()" />Fast</label><br></br>
+
+<script>
+    function good() {
+        var isGood = document.getElementById("good").checked;
+        var isCheap = document.getElementById("cheap").checked;
+
+        if (isGood && isCheap) {
+            document.getElementById("fast").checked = false;
+        }
+    }
+
+    function cheap() {
+        var isCheap = document.getElementById("cheap").checked;
+        var isFast = document.getElementById("fast").checked;
+
+        if (isCheap && isFast) {
+            document.getElementById("good").checked = false;
+        }
+    }
+
+    function fast() {
+        var isFast = document.getElementById("fast").checked;
+        var isGood = document.getElementById('good').checked;
+
+        if (isFast && isGood) {
+            document.getElementById("cheap").checked = false;
+        }
+    }
+</script>
+
+</html>

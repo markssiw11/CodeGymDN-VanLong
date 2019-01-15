@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title> arrays</title>
+</head>
+<style>
+    body {
+        padding-top: 50px
+    }
+</style>
+<script>
+
+    //1. Declare array x and initialize the initial value for the array.
+    var x = [1, 3, 5, 6, 8, 9, -3, -5, 7];
+    //2. max declaration is the largest value of the array
+    var max =x[0];
+    //3.Declaring an index variable by default assigns a value of 0 to store the index of the largest element in the array 
+    var index = 0;
+    //4.Use the loop to browse the entire array x from the next element to the end of the array. Check if an element in array x has a value greater than max, then gáb max is the element and assigns the index by the position of the element.
+    for (var i = 1; i < x.length; i++) {
+        if (x[i] > max) {
+            max = x[i];
+            index=i;
+        }
+    }
+    document.write("max is "+max+" at position " +index);
+</script>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title> number bigger than ten</title>
+</head>
+<script>
+    var integer = [12, 11, 10, 546, 32, 1, 3, 56, 1, 98];
+    var result = integer[0];
+    var count = 0;
+    for(var i=0;i<integer.length;i++) {
+        if(integer[i]>=10) {
+            result = integer[i];
+            document.write(integer[i]+" ");
+            count=count+1;
+        }
+    }
+    document.write("are  "+ count +" index bigger than ten");
+</script>
+
+</html>

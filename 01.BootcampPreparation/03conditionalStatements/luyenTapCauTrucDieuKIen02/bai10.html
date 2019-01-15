@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giá Bán Lẻ Điện Sinh Hoạt Bậc Thang</title>
+</head>
+<script>
+    var consume = parseInt(prompt('Số Chử Điện Tiêu Thụ Là '));
+    if(consume>401) {
+        alert("Giá Điện = " + consume*2.587 + "VND");
+    } else if (consume>301) {
+        alert('Giá Điện = ' +consume*2.503 + "VND");
+    } else if (consume>201) {
+        alert("Giá Điện = " + consume*2.242 + "VND");
+    } else if (consume>101) {
+        alert("Giá Điện = " + consume*1,786 + "VND");
+    } else if (consume>51) {
+        alert("Giá Điện = " + consume*1.533 + "VND");
+    } else {
+        alert("Giá Điện = " + consume*1.484 + "VND");
+    }
+</script>
+
+</html>

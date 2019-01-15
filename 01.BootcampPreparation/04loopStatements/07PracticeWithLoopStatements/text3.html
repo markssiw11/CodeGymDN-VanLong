@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị n Số Đầu Tiên Của Dãy Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Nhập n: "));
+        var fibonacciN2 = 1;
+        var finbonacciN1 = 1;
+            document.writeln(finbonacciN1);
+            document.writeln(fibonacciN2);
+        for (var i = 2; i < n; i++) {
+            var fibonacciN = finbonacciN1 + fibonacciN2;
+            document.writeln(fibonacciN);
+
+            fibonacciN2 = finbonacciN1;
+            finbonacciN1 = fibonacciN;
+        }
+    </script>
+</body>
+
+</html>

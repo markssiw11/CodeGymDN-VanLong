@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title> is prime</title>
+</head>
+<script>
+
+    function isPrime(numb) {
+        if (numb == 1) {
+            return false;
+        }
+        else if (numb == 2) {
+            return true;
+        }
+        else {
+            for (var i = 2; i < numb; i++) {
+                if (numb % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    } 
+    var count=0;
+    var n=parseInt(prompt("Enter limited: "))
+    for(var i =1;i<n;i++) {
+        var prime =isPrime(i);
+        if(prime==true) {
+            document.write(i+ " ");
+            count=count+1;
+        }
+    }
+    alert(count);
+</script>
+
+</html>

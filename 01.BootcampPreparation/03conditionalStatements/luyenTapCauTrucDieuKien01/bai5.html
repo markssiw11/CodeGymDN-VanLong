@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp Hạng Học Lực</title>
+</head>
+<script>
+    var testMarks = parseInt(prompt('testMarks'));
+    var midTermPoints = parseInt(prompt('midTermPoint'));
+    var endPoints = parseInt(prompt('endPoint'));
+    var result;
+    result= (testMarks+midTermPoints*2+endPoints*3)/6;
+    if(result>=8) {
+        alert('học sinh giỏi'); 
+    } else if(8.5>result>=6.5) {
+        alert('học sinh khá');
+    } else if(6.5>result>=5){
+        alert('học sinh trung bình');
+    } else {
+        alert('học sinh yếu')
+    }
+</script>
+
+</html>

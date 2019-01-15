@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="lang=en">
+    <title> find min index of arrays</title>
+</head>
+<script>
+    function minValue(arr) {
+        if (arr.length == 0) {
+            return NaN;
+        }
+        var min = arr[0];
+        for (i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        return min
+    }
+
+
+    var arr1 = [1, 2, 3, 4, -4, -10, -11, 12];
+    var min1 = minValue(arr1);
+    document.write(min1 +"</br>");
+    var arr2 = [];
+    var min2 = minValue(arr2);
+    document.write(min2);
+
+
+</script>
+
+</html>

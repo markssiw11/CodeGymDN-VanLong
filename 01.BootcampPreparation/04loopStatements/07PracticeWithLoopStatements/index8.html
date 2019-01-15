@@ -1,0 +1,39 @@
+<button onclick="play()">Play</button>
+<script>
+    function play() {
+        // 1. Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào.
+        var fromNumb = parseInt(prompt("From"));
+        var toNumb = parseInt(prompt("To"));
+        // 2. Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn  
+        var gameRandomNumb = randomInt(fromNumb, toNumb);
+        document.write(gameRandomNumb);
+        for (var i = 1; i <= 3; i++) {
+            // 3. Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán  
+            var playerChooseNumb = parseInt(prompt("Please guest a number"));
+            document.write("Lần thứ " + i + ":" + playerChooseNumb);
+
+            /* 4. Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+                    Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi  
+                    Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại. */
+            if (playerChooseNumb === gameRandomNumb) {
+                alert("You right!");
+                break;
+            } else {
+                alert("You wrong!");
+            }
+        }
+        alert('you lose!');
+    }
+
+
+
+    function randomInt(min, max) {
+        if (min == null && max == null)
+            return 0;
+        if (max == null) {
+            max = min;
+            min = 0;
+        }
+        return min + Math.floor(Math.random() * (max - min + 1));
+    };
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connect The Element</title>
+</head>
+
+<input type="text" id="words"></input>
+<input type="button" id="search" onclick="search()" value="tìm kiếm"></input>
+<script>
+    var wordsEnglish = ["provice", "search", "merchandise", "arrays", "goodbye", "hi"];
+    var wordsVietnamese = ["cung cấp", "tìm kiếm", "hàng hóa", "mảng", "tạm biệt", "xin chào"];
+
+    function search() {
+
+        var translateWord = document.getElementById('words').value;
+        var indexResult = -1;
+        for (i = 0; i < wordsEnglish.length; i++) {
+            if (translateWord == wordsEnglish[i]) {
+                indexResult = i;
+                alert(wordsVietnamese[i]);
+                break;
+            }
+        }
+        if (indexResult < 0) {
+            alert("not found");
+        }
+    }
+
+</script>
+
+</html>

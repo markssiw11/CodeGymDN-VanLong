@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>factorial of any integer</title>
+</head>
+
+<body>
+    <p id="showResult"></p>
+</body>
+<script>
+    function factorial(numb) {
+        var fact = 1;
+        if (numb == 1) {
+            return fact;
+        } else {
+            for (i = 1; i < numb; i++) {
+                fact = (fact * (fact + 1));
+            }
+            return fact;
+        }
+    }
+    var inte = parseInt(prompt("Enter any Integer: "));
+    var result = factorial(inte);
+    document.getElementById("showResult").innerHTML = result;
+</script>
+
+</html>

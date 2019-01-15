@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>is character of arrays</title>
+</head>
+<script>
+    var characterArray = ["s", "#", "%", "&", "d", "2", "%", "d", "#", "#", "&"];
+    function isCharacter(value) {
+        var sum = 0;
+        for (var i = 0; i < characterArray.length; i++) {
+            if (value == characterArray[i]) {
+                sum = sum + 1;
+            }
+        }
+        alert(value + " in an array " + " have " + sum + " character in an array");
+    }
+
+    var value = prompt("Enter a value: ");
+    isCharacter(value);
+
+
+</script>
+
+</html>

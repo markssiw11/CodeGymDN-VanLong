@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>area and circumference of the circle</title>
+</head>
+<body>
+    <p id="showResult1"></p>
+    <p id="showResult2"></p>
+</body>
+<script>
+    var radius = parseInt(prompt("enter rdius of circle: "));
+    var result1= "area is "+areaCircle(radius);
+    var result2= " circumference of circle is "+circumferenceCircle(radius);
+    document.getElementById("showResult1").innerHTML=result1;
+    document.getElementById("showResult2").innerHTML=result2;
+    function areaCircle(radius) {
+        return radius*radius*3.14;
+    }
+    function circumferenceCircle(radius) {
+        return 2*radius*3.14;
+    }
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>convert name start</title>
+</head>
+
+<body>
+    <p id="showResult"></p>
+</body>
+
+<script>
+    var numb = prompt("Enter a first number: ")
+    var nameStar1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    var nameStar2 = [" Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    function findNameStar() {
+        var result = -1;
+        for (i = 0; i < nameStar1.length; i++) {
+            if (numb == nameStar1[i]) {
+                result = i;
+                alert(nameStar2[i]);
+            }
+        }
+        if(result<0) {
+            alert("not found");
+        }
+    }
+    document.getElementById("showResult").innerHTML=findNameStar();
+</script>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>số tuổi để vào lớp 10</title>
+</head>
+<input type="number" id="age">
+<button onclick="checkAge()">nhập số tuổi</button>
+<p id="result"></p>
+<script>
+    function checkAge() {
+        var age = parseInt(document.getElementById("age").value);
+        if (age < 16) {
+            document.getElementById("result").innerHTML = "bạn ko đủ tuổi để nhập học";
+        }
+    }
+</script>
+
+</html>
