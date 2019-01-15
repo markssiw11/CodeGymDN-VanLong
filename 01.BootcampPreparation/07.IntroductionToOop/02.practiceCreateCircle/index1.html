@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>structure class date</title>
+</head>
+<script>
+    var Circle = function (radius) {
+        this.getRadius = function () {
+            return radius;
+        }
+        this.getArea = function () {
+            return Math.PI * radius * radius;
+        }
+    }
+    var Circle = new Circle(3);
+    var radius = Circle.getRadius();
+    var area = Circle.getArea();
+    alert("radius: " + radius + " ;area: " + area);
+</script>
+
+</html>
