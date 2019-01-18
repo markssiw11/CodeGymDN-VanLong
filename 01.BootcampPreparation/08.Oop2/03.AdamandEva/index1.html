@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adam And Eva</title>
+</head>
+<script>
+    function Apple() {
+        this.mass = 10;
+        this.decrease = function () {
+            if (this.mass > 0) {
+                return this.mass--;
+            }
+        }
+        this.isEmpty = function () {
+            if (this.mass == 0) {
+                return false;
+            }
+        }
+        this.getMass = function () {
+            return this.mass
+        }
+    }
+    function People(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.isMale = function () {
+            return this.gender;
+        }
+        this.setGender = function (gender) {
+            this.gender = gender;
+        }
+        this.checkApple = function (apple) {
+            return apple.getMass();
+        }
+        this.eat = function (apple) {
+            apple.decrease();
+            this.weight++;
+        }
+        this.say = function (sentence) {
+            console.log(sentence);
+        }
+        this.getName = function () {
+            return this.name;
+        }
+        this.setName = function (name) {
+            this.name = name;
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        }
+    }
+    var apple = new Apple();
+    var adam = new People("adam", "nam", 80);
+    var eva = new People("eva", "nu", 55);
+    for (i = 0; i < 10; i++) {
+        adam.eat(apple);
+        if (apple.getMass() > 0) {
+            eva.eat(apple);
+        }
+        if (apple.getMass() == 0) {
+            break;
+        }
+    }
+    console.log(adam.getName() +" "+ adam.getWeight()+" "+ adam.isMale());
+    console.log(eva.getName() +" "+ eva.getWeight()+" "+ eva.isMale());
+</script>
+
+</html>
