@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>tom and Jerry</title>
+</head>
+<script>
+    function Rat(name, weight, speech, status) {
+        this.name = name;
+        this.speech = speech;
+        this.weight = weight;
+        this.status = status;
+        this.islive = function () {
+            return this.status;
+        }
+        this.voice = function () {
+            return ("chít chít");
+        }
+        this.getSpeechRat = function () {
+            return this.speech;
+        }
+        this.getWeightRat = function () {
+            return this.weight;
+        }
+    }
+    function Cat(name, weight, speech) {
+        this.name = name;
+        this.weight = weight;
+        this.speech = speech;
+        this.voice = function () {
+            return ("meo meo");
+        }
+        this.getSpeechCat = function () {
+            return this.speech;
+        }
+        this.getWeightCat = function () {
+            return this.weight;
+        }
+        this.catchRat = function (rat) {
+            if (this.speech > rat.getSpeechRat()) {
+                console.log("catch success");
+                return true;
+            } else {
+                console.log("not success");
+                return false;
+            }
+        }
+        this.eatRat = function (rat) {
+            if (this.catchRat(rat) && rat.islive()) {
+                this.weight = this.weight + rat.getWeightRat();
+                console.log("eated");
+            } else {
+                console.log("eat not success");
+            }
+        }
+    }
+    var tom = new Cat("tom", 5, 35);
+    var hugo = new Cat("hugo", 6, 29);
+    var jerry = new Rat("jerry", 1, 30, true);
+    tom.eatRat(jerry);
+    hugo.eatRat(jerry);
+    console.log("weight of tom is " + tom.getWeightCat());
+    console.log("weight of hugo is " + hugo.getWeightCat());
+    console.log(tom.voice());
+</script>
+
+</html>

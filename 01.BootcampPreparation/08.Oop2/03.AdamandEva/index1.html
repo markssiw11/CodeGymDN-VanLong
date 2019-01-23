@@ -10,11 +10,13 @@
         this.mass = 10;
         this.decrease = function () {
             if (this.mass > 0) {
-                return this.mass--;
+                this.mass--;
             }
         }
         this.isEmpty = function () {
             if (this.mass == 0) {
+                return true;
+            } else {
                 return false;
             }
         }
@@ -33,14 +35,16 @@
             this.gender = gender;
         }
         this.checkApple = function (apple) {
-            return apple.getMass();
+            return !apple.isEmpty();
         }
         this.eat = function (apple) {
-            apple.decrease();
-            this.weight++;
+            if (checkApple(apple)) {
+                apple.decrease();
+                this.weight++;
+            }
         }
-        this.say = function (sentence) {
-            console.log(sentence);
+        this.say = function (speak) {
+            console.log(speak);
         }
         this.getName = function () {
             return this.name;
@@ -56,8 +60,8 @@
         }
     }
     var apple = new Apple();
-    var adam = new People("adam", "nam", 80);
-    var eva = new People("eva", "nu", 55);
+    var adam = new People("adam", "male", 80);
+    var eva = new People("eva", "female", 55);
     for (i = 0; i < 10; i++) {
         adam.eat(apple);
         if (apple.getMass() > 0) {
@@ -67,8 +71,9 @@
             break;
         }
     }
-    console.log(adam.getName() +" "+ adam.getWeight()+" "+ adam.isMale());
-    console.log(eva.getName() +" "+ eva.getWeight()+" "+ eva.isMale());
+    console.log(adam.getName() + " " + adam.getWeight() + " " + adam.isMale());
+    console.log(eva.getName() + " " + eva.getWeight() + " " + eva.isMale());
+    adam.say("ly ngu nhu bo");
 </script>
 
 </html>

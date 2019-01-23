@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>canvas restangle</title>
+</head>
+
+<body>
+    <canvas id="paintRestangle" width="500" height="700"></canvas>
+    <script>
+        function MyRestangle(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.getX = function() {
+                return this.x;
+            }
+            this.getY = function() {
+                return this.y;
+            }
+            this.getWidth = function() {
+                return this.width;
+            }
+            this.getHeight= function() {
+                return this.height;
+            }
+            this.getArea = function () {
+                return this.width * this.height;
+            }
+            this.getPerimeter = function () {
+                return (this.width + this.height) * 2;
+            }
+            this.setRestangle = function (width, height) {
+                this.width = width;
+                this.height = height;
+            }
+        }
+        var restangle = new MyRestangle(100, 100, 300, 250);
+        var area = restangle.getArea();
+        var perimeter = restangle.getPerimeter();
+        var canvasRestangle = document.getElementById("paintRestangle")
+        if (canvasRestangle.getContext) {
+            var ctx = canvasRestangle.getContext('2d');
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(restangle.getX(),restangle.getY(),restangle.getWidth(),restangle.getHeight());
+            alert("area is: " + area + " " + " perimeter is " + perimeter);
+        }
+    </script>
+</body>
+
+</html>

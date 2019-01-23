@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<script>
+    function ConvertTemperature(celcius) {
+        this.celcius= celcius;
+        this.getFarhrenheit = function() {
+            return this.celcius*9/5+32;
+        }
+        this.getKenvin= function() {
+            return this.celcius+273.15;
+        }
+    }
+    var celcius=parseInt(prompt("Enter a temperature celcius:"));
+    var temperature = new ConvertTemperature(celcius);
+    var farhrenheit= temperature.getFarhrenheit();
+    var kenvin = temperature.getKenvin();
+    alert( celcius+"oC"+" as " +farhrenheit+"oF " +" as " +kenvin+"oK.");
+</script>
+
+</html>

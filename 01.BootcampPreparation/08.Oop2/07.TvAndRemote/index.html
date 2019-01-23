@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tv and remote</title>
+</head>
+<script src="js/remote.js"></script>
+<script src="js/tv.js"></script>
+<script>
+    var remote = new Remote(2250);
+    var tv = new Tv();
+    tv.turnOn();
+    tv.changeChanel(7);
+    tv.getChanel();
+    remote.changeChanelTv(tv, 3);
+    tv.getChanel();
+    for (var i = 0; i < 10; i++) {
+        remote.increaseVolumeTv(tv);
+    }
+    tv.getVolume();
+    remote.turnOffTv(tv);
+</script>
+
+</html>

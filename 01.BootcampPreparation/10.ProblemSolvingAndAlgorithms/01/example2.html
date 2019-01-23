@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <canvas id="restangle" width="700" height="700"></canvas>
+    <script>
+        var canvas = document.getElementById("restangle");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.lineWidth = "3";
+            ctx.fillStyle = "red";
+            ctx.fillRect(5, 5, 300, 200);
+        }
+
+
+    </script>
+</body>
+
+</html>

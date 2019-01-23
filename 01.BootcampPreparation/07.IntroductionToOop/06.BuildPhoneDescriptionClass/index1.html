@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+ write message:<input id="inputMessenger" type="text"></input>
+<script>
+    function Mobile(name,battery,memoryAreaSaveWriteMessage,memorySaveIncomingMessage,saveMessageSent,status) {
+        this.battery = battery;
+
+        this.memoryAreaSaveWriteMessage = memoryAreaSaveWriteMessage;
+
+        this.memorySaveIncomingMessage = memorySaveIncomingMessage;
+
+        this.saveMessageSent = saveMessageSent;
+        this.status= status;
+        this.checkOnOrOff = function() {
+            if (this.status) {
+                return "On";
+            } else {
+                return "Off";
+            }
+        }
+        this.turnOnOrOff = function() {
+            this.status = !this.status;
+        }
+        this.charging = function() {
+            return this.battery+=1;
+        }
+        this.writeMessage = function() {
+            document.getElementById("inputMessage").innerHTML=this.memoryAreaSaveWriteMessage
+        }
+        this.receiveMessage = function() {
+            return this.memorySaveIncomingMessage;
+        }
+        this.sentMessage = function() {
+
+        }
+        this.seeMessageIncoming = function() {
+
+        }
+        this.seeMessageSent = function() {
+
+        }
+        this.useCharge = function() {
+
+        }
+        this.checkOnOrOff = function() {
+
+        }
+    }
+
+</script>
+
+</html>
